@@ -1,12 +1,11 @@
 from math import ceil
 
 
-def ceil_sum(a, b):
-    return ceil(a + b)
+def square(side):
+    return ceil(side * side)
 
 
-a = float(input('Введите первое слагаемое:'))
-b = float(input('Введите второе слагаемое:'))
+side = float(input('Введите сторону квадрата:'))
 
 
-print(f'Округленная в большую сторону сумма - {ceil_sum(a, b)}')
+print(f'Округленная в большую сторону площадь - {square(side)}')
