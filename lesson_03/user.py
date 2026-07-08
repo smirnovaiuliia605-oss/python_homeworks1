@@ -11,7 +11,3 @@ class User:
 
     def get_unit_info(self):
         return f"Unit: {self.first_name}, {self.last_name}"
-
-
-
-

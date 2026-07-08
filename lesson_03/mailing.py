@@ -6,9 +6,11 @@ class Mailing:
         self.track = track
 
     def __str__(self):
-        return (f"Отправление {self.from_address.index}, из {self.from_address.city},"
-                f" {self.from_address.street}, {self.from_address.house} - {self.from_address.apartment} в "
-                f"{self.to_address.index}, {self.to_address.city}, {self.to_address.street}, {self.to_address.house} - {self.to_address.apartment}"
+        return (f"Отправление {self.from_address.index},"
+                f" из {self.from_address.city},"
+                f" {self.from_address.street}, {self.from_address.house}"
+                f" - {self.from_address.apartment} в "
+                f"{self.to_address.index}, {self.to_address.city}, "
+                f"{self.to_address.street}, {self.to_address.house} -"
+                f" {self.to_address.apartment}"
                 f". Стоимость {self.cost} рублей, {self.track}")
-
-

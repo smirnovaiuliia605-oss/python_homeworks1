@@ -6,4 +6,3 @@ class Address:
         self.street = street
         self.house = house
         self.apartment = apartment
-
