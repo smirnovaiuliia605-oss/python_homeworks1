@@ -1,0 +1,6 @@
+# При передачи значения "None" упали следующие функции:
+- test_trim_negative_invalid_types;
+- test_contains_negative_invalid_types;
+- test_delete_simbol_negative_invalid_types.
+Во всех случаях выходит системная ошибка ("AttributeError").
+ Должна возвращаться пустая строка или "TypeError".
