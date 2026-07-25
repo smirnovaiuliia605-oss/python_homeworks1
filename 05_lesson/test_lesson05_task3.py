@@ -9,8 +9,10 @@ def test_multiple_elements():
     assert len(links) == 10
 
     for link in links:
-        assert link.is_displayed(), f"Link with text '{link.text}' is not displayed."
+        assert link.is_displayed(), \
+            f"Link with text '{link.text}' is not displayed."
         first_link_text = links[0].text
-        assert "1" in first_link_text, f"Expected '1' in first link text, but got '{first_link_text}'"
+        assert "1" in first_link_text, \
+            f"Expected '1' in first link text, but got '{first_link_text}'"
 
     driver.quit()
