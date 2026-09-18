@@ -8,9 +8,11 @@ from cart_page import CartPage
 from checkout_page import CheckoutPage
 
 
-
 @pytest.fixture
 def driver():
+    """Фикстура для запуска браузера Firefox и открытия стартовой страницы.
+                  WebDriver: Экземпляр драйвера Firefox.
+       """
     driver = webdriver.Firefox()
     driver.get("https://www.saucedemo.com/")
     yield driver
@@ -27,7 +29,8 @@ def driver():
 )
 @allure.feature("Оформление заказа")
 @allure.severity(Severity.BLOCKER)
-def test_checkout_flow(driver):
+def test_checkout_flow(driver) -> None:
+    """Тест для проверки оформления заказа."""
 
     with allure.step("Пройти авторизацию: ввести имя пользователя и пароль"):
         login_page = LoginPage(driver)
