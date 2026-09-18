@@ -8,19 +8,21 @@ from calculator_page import CalculatorPage
 def driver():
     """
     Фикстура для инициализации и завершения работы драйвера.
+    WebDriver: Экземпляр драйвера Chrome.
     """
     driver = webdriver.Chrome()
     driver.maximize_window()
     yield driver
 
 
-@allure.title("Проверка функциональности калькулятора с задержкой")
+@allure.title("Функциональность калькулятора с задержкой")
 @allure.description("Тест проверяет функциональные возможности калькулятора:"
                     " установку задержки, "
                     "ввода выражения '7+8=', получение результата '15'")
 @allure.feature("Функциональность вычислений калькулятора")
 @allure.severity("severity_level. CRITICAL")
-def test_calculator(driver):
+def test_calculator(driver) -> None:
+    """Тест для проверки операции сложения на калькуляторе."""
     with allure.step("Открыть страницу по ссылке"):
         calculator_page = CalculatorPage(
             driver, "https://bonigarcia.dev/selenium-webdriver-java/"
